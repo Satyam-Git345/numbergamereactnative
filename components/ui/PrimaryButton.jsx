@@ -7,9 +7,6 @@ import {
 } from "react-native";
 import Colors from "../../constants/colors";
 
-
-
-
 const PrimaryButton = ({ children, onPress }) => {
   return (
     <View style={styles.outerButtonStyle}>
@@ -32,7 +29,7 @@ const styles = StyleSheet.create({
   },
   touchableStyle: {
     borderRadius: 15,
-    backgroundColor:"#DA70D6",
+    backgroundColor: "#DA70D6",
     padding: 10,
     paddingVertical: 10,
     elevation: 10,
@@ -41,7 +38,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontWeight: "bold",
-    color: "	#DA70D6",
+    color: "white",
     fontSize: 17,
     textAlign: "center",
   },

@@ -5,7 +5,7 @@ import Colors from "../../constants/colors";
 
 const Title = ({ children }) => {
   return (
-    <View>
+    <View style={styles.root}>
       <Text style={styles.textStyle}>{children}</Text>
     </View>
   );
@@ -14,13 +14,16 @@ const Title = ({ children }) => {
 export default Title;
 
 const styles = StyleSheet.create({
+  root:{
+    padding: 10,
+  },
+
   textStyle: {
-    fontSize: 25,
+    fontSize: 30,
     fontWeight: "bold",
     color: 'white',
     textAlign: "center",
     borderWidth: 3,
-    padding: 10,
     borderColor: "white",
     borderRadius: 10,
   },
