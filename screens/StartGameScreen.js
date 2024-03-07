@@ -1,7 +1,13 @@
-import { StyleSheet, Text, TextInput, View, Alert, Platform,} from "react-native";
+import {
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+  Alert,
+  Platform,
+} from "react-native";
 import React, { useEffect, useState } from "react";
-import PrimaryButton from "../components/PrimaryButton";
-
+import PrimaryButton from "../components/ui/PrimaryButton";
 
 const StartGameScreen = ({ onPicknumber }) => {
   const [enteredText, setEnteredText] = useState("");
@@ -9,39 +15,17 @@ const StartGameScreen = ({ onPicknumber }) => {
     const chosenNumber = parseInt(enteredText);
     if (chosenNumber > 99 || isNaN(chosenNumber) || chosenNumber <= 0) {
       {
-        Platform.OS==='android' || Platform.OS==='ios' ? 
-        (
-          Alert.alert("Invalid Number!!", "Enter Nmber between 1 to 99", [
-            { text: "okey", style: "destructive" },
-          ])
-        )
-        :Alert("Invalid Number!!", "Enter Nmber between")
+        Alert.alert("Invalid Number!!", "Enter Nmber between 1 to 99", [
+          { text: "okey", style: "destructive" },
+        ])
       }
       return;
     }
-    onPicknumber(enteredText)
+    onPicknumber(enteredText);
   };
 
   const resetInputHandler = () => {
     setEnteredText("");
-  };
-
-
-  const showAlert = () => {
-    console.log("showAlert")
-    // Alert.alert(
-    //   'Alert Title',
-    //   'Alert Message',
-    //   [
-    //     {
-    //       text: 'OK',
-    //       onPress: () => console.log('OK Pressed')
-    //     }
-    //   ],
-    //   { cancelable: false }
-    // );
-
-    alert("react alert")
   };
 
   return (
@@ -63,10 +47,6 @@ const StartGameScreen = ({ onPicknumber }) => {
         </View>
         <View style={{ flex: 1 }}>
           <PrimaryButton onPress={confirmInputHandler}>Confirm</PrimaryButton>
-        </View>
-
-        <View style={{ flex: 1 }}>
-          <PrimaryButton onPress={showAlert}>Show alert</PrimaryButton>
         </View>
       </View>
     </View>

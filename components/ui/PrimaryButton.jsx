@@ -5,8 +5,9 @@ import {
   StyleSheet,
   Pressable,
 } from "react-native";
+import Colors from "../../constants/colors";
 
-import Colors from "../constants/colors";
+
 
 
 const PrimaryButton = ({ children, onPress }) => {
@@ -31,7 +32,7 @@ const styles = StyleSheet.create({
   },
   touchableStyle: {
     borderRadius: 15,
-    backgroundColor: Colors.primary600,
+    backgroundColor:"#DA70D6",
     padding: 10,
     paddingVertical: 10,
     elevation: 10,
@@ -40,7 +41,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontWeight: "bold",
-    color: "white",
+    color: "	#DA70D6",
     fontSize: 17,
     textAlign: "center",
   },
